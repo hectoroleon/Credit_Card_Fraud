@@ -16,13 +16,21 @@ The dataset from Kaggle includes features like:
 
 CREDIT_CARD_FRAUD
 ├── data/credit_card_data.csv # Dataset
+
 ├── docker_image/saved-image.tar # Saved Docker image
+
 ├── model/rf_fraud_detection.pkl # Trained Random Forest model
+
 ├── app.py # Flask API
+
 ├── Dockerfile # Dockerfile
+
 ├── EDA_Model.ipynb # EDA and model training
+
 ├── LICENSE # License file
+
 ├── README.md # Project documentation
+
 └── requirements.txt # Python dependencies
 
 
