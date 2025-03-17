@@ -59,12 +59,12 @@ https://drive.google.com/drive/folders/1_7sUohckLqtr52vtBXwEhVoPxJz1mMYt?usp=dri
    ```bash
    docker load -i docker_image/saved-image.tar
    
-3. **Run Container**
-   
+2. **Run Container**
+   ```bash
    docker run -p 5000:5000 fraud-detection-api
    
-4. **Test API**
-   
+3. **Test API**
+   ```bash
     curl -X POST -H "Content-Type: application/json" -d '{
     "ratio_to_median_purchase_price": 1.5,
     "online_order": 1,
@@ -75,6 +75,7 @@ https://drive.google.com/drive/folders/1_7sUohckLqtr52vtBXwEhVoPxJz1mMYt?usp=dri
 
 ## Future Deployment
 1. **Push the Docker image to Docker Hub:**
+   ```bash
     docker tag fraud-detection-api <your-dockerhub-username>/fraud-detection-api:latest
     docker push <your-dockerhub-username>/fraud-detection-api:latest
-2. **Deploy to a cloud platform**
+3. **Deploy to a cloud platform**
