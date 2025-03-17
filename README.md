@@ -15,6 +15,7 @@ The dataset from Kaggle includes features like:
 ## Project Structure
 
 CREDIT_CARD_FRAUD
+
 ├── data/credit_card_data.csv # Dataset
 
 ├── docker_image/saved-image.tar # Saved Docker image
@@ -33,6 +34,12 @@ CREDIT_CARD_FRAUD
 
 └── requirements.txt # Python dependencies
 
+### Model and Docker Image Storage
+
+Due to size constraints, the trained model and Docker image are stored in Google Drive. You can access them using the following link:
+
+https://drive.google.com/drive/folders/1_7sUohckLqtr52vtBXwEhVoPxJz1mMYt?usp=drive_link
+
 
 ## Steps in the Project
 1. **Data Collection**: Dataset sourced from Kaggle.
@@ -48,11 +55,16 @@ CREDIT_CARD_FRAUD
 
 ## How to Use
 1. **Load Docker Image**:
+   
    ```bash
    docker load -i docker_image/saved-image.tar
-2. **Run Container**
+   
+3. **Run Container**
+   
    docker run -p 5000:5000 fraud-detection-api
-3. **Test API**
+   
+4. **Test API**
+   
     curl -X POST -H "Content-Type: application/json" -d '{
     "ratio_to_median_purchase_price": 1.5,
     "online_order": 1,
